@@ -8,17 +8,12 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 
-
-
-file_path = r''
-
-#Step One : Create and open the GUI
 window = tkinter.Tk()
 
 window.title('Wades Wonderful Watermarker')
 window.minsize(width = 500, height = 100)
 
-def action_two():
+def action():
    file_path = tkinter.filedialog.askopenfilename()
    image = Image.open(file_path)
    watermark_image = image.copy()
@@ -39,7 +34,7 @@ def action_two():
    image.save(r'C:\Users\wcogh\Desktop\Watermarked Images\watermark.jpg')
 
 
-button_two = tkinter.Button(text="Watermark an Image...", height=5,width=50, command=action_two)
+button_two = tkinter.Button(text="Watermark an Image...", height=5,width=50, command=action)
 button_two.pack()
 
 
